@@ -44,9 +44,8 @@ func _process(delta):
 	#print(delta)
 	pass
 func _input(event):
-	var camera_position = get_viewport().get_camera_2d().global_position
-	
 	if event is InputEventMouseButton:
+		var camera_position = get_viewport().get_camera_2d().global_position	
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			var cir = Circle.instantiate()
 			cir.position.y = event.position.y -330 + camera_position.y

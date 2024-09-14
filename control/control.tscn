@@ -9,6 +9,7 @@ offset_left = 555.0
 offset_top = 12.0
 offset_right = 606.0
 offset_bottom = 48.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "SCORE
 "
 
@@ -25,4 +26,5 @@ offset_left = 50.0
 offset_top = 603.0
 offset_right = 90.0
 offset_bottom = 626.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "x 5"

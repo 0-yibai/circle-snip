@@ -1,8 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://dekwge3m81fql"]
+[gd_scene load_steps=5 format=3 uid="uid://dekwge3m81fql"]
 
 [ext_resource type="Texture2D" uid="uid://dhhwu0siu4x1k" path="res://asset/Grid Background.png" id="1_bmn6f"]
 [ext_resource type="Script" path="res://gameplay/level.gd" id="1_j53vf"]
-[ext_resource type="PackedScene" uid="uid://cud6kumrfivg2" path="res://control/control.tscn" id="1_swede"]
 [ext_resource type="Script" path="res://gameplay/Camera2D.gd" id="2_8w1d1"]
 [ext_resource type="PackedScene" uid="uid://d4m0obbppvvmu" path="res://gameplay/circle.tscn" id="4_0s85o"]
 
@@ -21,8 +20,6 @@ centered = false
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("2_8w1d1")
-
-[node name="Control" parent="." instance=ExtResource("1_swede")]
 
 [node name="Circle" parent="." instance=ExtResource("4_0s85o")]
 position = Vector2(319, 200)
