@@ -1,7 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://okkk6sii6ayi"]
+[gd_scene load_steps=7 format=3 uid="uid://okkk6sii6ayi"]
 
 [ext_resource type="Script" path="res://element/compass.gd" id="1_lfeym"]
 [ext_resource type="Texture2D" uid="uid://bf4hyg7cpx0fu" path="res://asset/Compass sprite.png" id="2_owu7a"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4btlv"]
+radius = 213.722
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wibwr"]
 atlas = ExtResource("2_owu7a")
@@ -26,10 +29,17 @@ animations = [{
 }]
 
 [node name="Compass" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("1_lfeym")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(28, -68)
+scale = Vector2(1.50371, 1.89019)
+shape = SubResource("CircleShape2D_4btlv")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_0s875")
 autoplay = "default"
+frame = 1
+frame_progress = 0.431662
