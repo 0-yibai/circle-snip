@@ -66,6 +66,7 @@ func generate_scissors(height):
 	add_child(sci)
 	current_scissors_count+=1
 	return height-random_number_y
+	
 func generate_compass(height):
 	var random_number_y = randi() % 250 
 	var random_number_x = randi() % 1000
