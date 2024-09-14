@@ -19,6 +19,7 @@ offset_right = 483.0
 offset_bottom = 1357.0
 scale = Vector2(0.0870691, 0.0826981)
 texture = ExtResource("1_8xxbt")
+texture = ExtResource("1_yya4c")
 
 [node name="Compass Count" type="Label" parent="."]
 offset_left = 50.0
