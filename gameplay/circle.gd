@@ -16,7 +16,7 @@ func _ready():
 
 
 func _on_area_2d_body_entered(body):
-	var test =$".."
+	var test =$"../../test"
 	if body.collision_layer == 4:
 		test.compass_list[0].queue_free()
 		test.compass_list=test.compass_list.slice(1,)

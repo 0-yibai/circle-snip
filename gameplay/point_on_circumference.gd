@@ -9,7 +9,7 @@ var ruler
 var circle
 var camera
 var level
-
+var test
 const MOVING = 1
 const DRAWING = 2
 const FINALIZED = 3
@@ -25,6 +25,7 @@ var y
 var new_r
 
 func _ready():
+	test =$"../../../test"
 	circle = $"../Sprite2D"
 	camera = $"../../Camera2D"
 	level = get_parent().get_parent()
@@ -32,9 +33,11 @@ func _ready():
 func _physics_process(delta):
 	if state == MOVING:
 		if Input.is_action_just_pressed("ui_down"):
+			test.CC.text = "x %d" % (int(test.CC.text) - 1)
 			state = DRAWING
 			handle_drawing()
 		else:
+			theta+=0.05
 			move_around_circle()
 
 func handle_drawing():
