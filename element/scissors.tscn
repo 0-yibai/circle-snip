@@ -1,10 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://bg018bkh0jgtw"]
+[gd_scene load_steps=6 format=3 uid="uid://bg018bkh0jgtw"]
 
 [ext_resource type="Script" path="res://element/scissors.gd" id="1_3y6jf"]
+[ext_resource type="Texture2D" uid="uid://dtnqvk1gnjntm" path="res://asset/Scissors sprite.png" id="2_8t76t"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_do6jd"]
+atlas = ExtResource("2_8t76t")
+region = Rect2(0, 0, 540, 648)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_687fs"]
+atlas = ExtResource("2_8t76t")
+region = Rect2(540, 0, 540, 648)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_scoli"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_do6jd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_687fs")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="Scissors" type="CharacterBody2D"]
 script = ExtResource("1_3y6jf")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_scoli")
+autoplay = "default"
