@@ -8,7 +8,7 @@
 radius = 38.0526
 
 [node name="Circle" type="CharacterBody2D"]
-position = Vector2(98, 75)
+position = Vector2(0, 1)
 collision_layer = 0
 collision_mask = 6
 script = ExtResource("1_hruti")
@@ -20,4 +20,14 @@ texture = ExtResource("1_nyu1v")
 [node name="PointOnCircumference" parent="." instance=ExtResource("2_vynd3")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CircleShape2D_2k1dw")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_2k1dw")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

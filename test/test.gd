@@ -12,9 +12,11 @@ var current_scissors_count = 0
 var scissor_list = []
 var compass_list=[]
 var score
+var CC
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	score = $"Control/Score"
+	CC= $"Control/Compass Count"
 	
 	pass # Replace with function body.
 
@@ -47,10 +49,13 @@ func _input(event):
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
 			var cir = Circle.instantiate()
-			cir.position = event.position
-			print(camera_position.y-scissor_list[0].position.y)
-			var c_p = event.position
+			cir.position.y = event.position.y -330 + camera_position.y
+			cir.global_position.x = event.global_position.x
+			add_child(cir)
+			print(camera_position)
+			var c_p = get_global_mouse_position()
 			print(c_p)
+	
 func generate_scissors(height):
 	var random_number_y = randi() % 250 
 	var random_number_x = randi() % 1000
