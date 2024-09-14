@@ -1,10 +1,35 @@
-[gd_scene load_steps=2 format=3 uid="uid://okkk6sii6ayi"]
+[gd_scene load_steps=6 format=3 uid="uid://okkk6sii6ayi"]
 
 [ext_resource type="Script" path="res://element/compass.gd" id="1_lfeym"]
+[ext_resource type="Texture2D" uid="uid://bf4hyg7cpx0fu" path="res://asset/Compass sprite.png" id="2_owu7a"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wibwr"]
+atlas = ExtResource("2_owu7a")
+region = Rect2(0, 0, 525, 1080)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h33b2"]
+atlas = ExtResource("2_owu7a")
+region = Rect2(525, 0, 525, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0s875"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wibwr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h33b2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
 
 [node name="Compass" type="CharacterBody2D"]
 script = ExtResource("1_lfeym")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0s875")
+autoplay = "default"
