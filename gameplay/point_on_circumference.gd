@@ -15,7 +15,6 @@ const DRAWING = 2
 const FINALIZED = 3
 
 var state = MOVING
-var circle
 
 var theta = 0
 
