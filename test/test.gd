@@ -10,15 +10,19 @@ var current_compass_count = 0
 var current_scissors_count = 0
 var scissor_list = []
 var compass_list=[]
+var score
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	score = $"Control/Score"
 	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
 	var camera_position = get_viewport().get_camera_2d().global_position
+	score.text = "score: %d" % (-1*camera_position.y)
 	if current_compass_count <= MAX_COMPASS_COUNT:
 		starting_compass_height = generate_compass(starting_compass_height)
 	if current_scissors_count <= MAX_SCISSORS_COUNT:
