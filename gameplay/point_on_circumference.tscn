@@ -1,3 +1,11 @@
-[gd_scene format=3 uid="uid://dw7h6w33fdqln"]
+[gd_scene load_steps=3 format=3 uid="uid://dw7h6w33fdqln"]
+
+[ext_resource type="Texture2D" uid="uid://b6ad0p2pi6rj3" path="res://asset/point.png" id="1_ldx32"]
+[ext_resource type="Script" path="res://gameplay/point_on_circumference.gd" id="1_pxvnl"]
 
 [node name="PointOnCircumference" type="CharacterBody2D"]
+script = ExtResource("1_pxvnl")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_ldx32")
