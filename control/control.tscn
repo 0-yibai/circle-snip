@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cud6kumrfivg2"]
 
-[ext_resource type="Texture2D" path="res://asset/Cropped Compass.png" id="1_8xxbt"]
+[ext_resource type="Texture2D" uid="uid://dwrydyn3va53b" path="res://asset/Cropped Compass.png" id="1_8xxbt"]
 
 [node name="Control" type="CanvasLayer"]
 
