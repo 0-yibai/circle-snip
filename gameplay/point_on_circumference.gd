@@ -3,6 +3,7 @@ extends CharacterBody2D
 const CIRCLE_SCENE = preload("res://gameplay/circle.tscn")
 
 var circle_scene
+var ini_radius = 1544 * 0.05 / 2
 
 const RULER = preload("res://utility/ruler.tscn")
 var ruler

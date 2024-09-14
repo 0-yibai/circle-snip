@@ -2,7 +2,7 @@ extends Node2D
 const Scissors = preload("res://element/scissors.tscn")
 const Compass = preload("res://element/compass.tscn")
 const Circle = preload("res://gameplay/circle.tscn")
-const MAX_COMPASS_COUNT = 10
+const MAX_COMPASS_COUNT = 20
 const MAX_SCISSORS_COUNT = 20
 var cc = 5
 var current_max_height = 230

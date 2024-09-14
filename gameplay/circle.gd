@@ -21,8 +21,8 @@ func _on_area_2d_body_entered(body):
 	if body.collision_layer == 4:
 		test.compass_list[0].queue_free()
 		test.compass_list=test.compass_list.slice(1,)
-		test.cc+=1
-		test.CC.text = "x %d" % (int(test.CC.text) + 1)
+		test.cc+=5
+		test.CC.text = "x %d" % (int(test.CC.text) + 5)
 	if body.collision_layer == 2:
 		lose.visible = true
 		get_tree().paused = true
