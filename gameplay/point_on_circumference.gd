@@ -11,8 +11,6 @@ var theta = 0
 
 var cen
 var r
-var x
-var y
 
 func _ready():
 	circle = $"../Sprite2D"
@@ -23,6 +21,7 @@ func _physics_process(delta):
 			state = DRAWING
 			handle_drawing()
 		else:
+			theta += 0.02
 			move_around_circle()
 
 func handle_drawing():
@@ -32,5 +31,6 @@ func move_around_circle():
 	cen = circle.position
 	r = get_parent().radius
 	
-	x = cen.x + r * sin(theta)
-	y = cen.y + r * cos(theta)
+	position.x = cen.x + r * sin(theta)
+	position.y = cen.y + r * cos(theta)
+
