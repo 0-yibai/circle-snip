@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://yf2rmycs8vyo"]
+
+[ext_resource type="Script" path="res://utility/ruler.gd" id="1_b2u8o"]
+[ext_resource type="Texture2D" uid="uid://dtg4y3txno6x1" path="res://asset/ruler.png" id="2_viiep"]
+
+[node name="Ruler" type="StaticBody2D"]
+scale = Vector2(0.2, 1)
+script = ExtResource("1_b2u8o")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_viiep")
