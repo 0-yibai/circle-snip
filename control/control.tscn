@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://cud6kumrfivg2"]
 
-[ext_resource type="Texture2D" uid="uid://duc62br8u1rc7" path="res://asset/Compass Cropped.png" id="1_yya4c"]
+[ext_resource type="Texture2D" path="res://asset/Cropped Compass.png" id="1_8xxbt"]
 
 [node name="Control" type="CanvasLayer"]
 
@@ -16,9 +16,9 @@ text = "SCORE
 offset_left = 3.0
 offset_top = 582.0
 offset_right = 483.0
-offset_bottom = 1357.0
+offset_bottom = 1362.0
 scale = Vector2(0.0870691, 0.0826981)
-texture = ExtResource("1_yya4c")
+texture = ExtResource("1_8xxbt")
 
 [node name="Compass Count" type="Label" parent="."]
 offset_left = 50.0
