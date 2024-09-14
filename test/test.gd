@@ -1,6 +1,7 @@
 extends Node2D
 const Scissors = preload("res://element/scissors.tscn")
 const Compass = preload("res://element/compass.tscn")
+const Circle = preload("res://gameplay/circle.tscn")
 const MAX_COMPASS_COUNT = 10
 const MAX_SCISSORS_COUNT = 20
 var current_max_height = 230
@@ -42,8 +43,11 @@ func _process(delta):
 	pass
 func _input(event):
 	var camera_position = get_viewport().get_camera_2d().global_position
+	
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and event.pressed:
+			var cir = Circle.instantiate()
+			cir.position = event.position
 			print(camera_position.y-scissor_list[0].position.y)
 			var c_p = event.position
 			print(c_p)

@@ -1,11 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://d4m0obbppvvmu"]
+[gd_scene load_steps=5 format=3 uid="uid://d4m0obbppvvmu"]
 
 [ext_resource type="Script" path="res://gameplay/circle.gd" id="1_hruti"]
 [ext_resource type="Texture2D" uid="uid://b2rm4u3j6bgvw" path="res://asset/circle.png" id="1_nyu1v"]
 [ext_resource type="PackedScene" uid="uid://dw7h6w33fdqln" path="res://gameplay/point_on_circumference.tscn" id="2_vynd3"]
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_2k1dw"]
+radius = 38.0526
+
 [node name="Circle" type="CharacterBody2D"]
 position = Vector2(98, 75)
+collision_layer = 0
+collision_mask = 6
 script = ExtResource("1_hruti")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -13,3 +18,6 @@ scale = Vector2(0.05, 0.05)
 texture = ExtResource("1_nyu1v")
 
 [node name="PointOnCircumference" parent="." instance=ExtResource("2_vynd3")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_2k1dw")
