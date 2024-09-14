@@ -27,3 +27,8 @@ func _on_area_2d_body_entered(body):
 		#lose ???? or minus compass
 	print("1")
 	pass # Replace with function body.
+	
+func set_radius(new_radius):
+	radius = new_radius
+	$Sprite2D.scale.x = float(new_radius) / 1544.0 * 2.0
+	$Sprite2D.scale.y = float(new_radius) / 1544.0 * 2.0
