@@ -48,6 +48,7 @@ func handle_drawing():
 	new_r = await ruler.get_len()
 	ruler.queue_free()
 	add_new_circle(global_position, new_r)
+	test.cc -= 1
 
 func move_around_circle():
 	cen = circle.position

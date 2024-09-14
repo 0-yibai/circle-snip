@@ -7,7 +7,7 @@ extends Camera2D
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	position.y -= 0.05
+	position.y -= 0.20
 	
 	#test
 	#ruler = RULER.instantiate()

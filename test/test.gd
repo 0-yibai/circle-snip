@@ -4,26 +4,32 @@ const Compass = preload("res://element/compass.tscn")
 const Circle = preload("res://gameplay/circle.tscn")
 const MAX_COMPASS_COUNT = 10
 const MAX_SCISSORS_COUNT = 20
+var cc = 5
 var current_max_height = 230
 var starting_compass_height = 200
-var starting_scissors_height = 230
+var starting_scissors_height = 0
 var current_compass_count = 0
 var current_scissors_count = 0
 var scissor_list = []
 var compass_list=[]
 var score
 var CC
+var lose
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	score = $"Control/Score"
 	CC= $"Control/Compass Count"
+	lose =$"Control/Lose"
 	
 	pass # Replace with function body.
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	
+	if cc <= 0:
+		lose.visible = true
+		get_tree().paused = true
+		pass	
 	var camera_position = get_viewport().get_camera_2d().global_position
 	score.text = "score: %d" % (-1*camera_position.y)
 	if current_compass_count <= MAX_COMPASS_COUNT:
